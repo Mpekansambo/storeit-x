@@ -16,7 +16,8 @@ function encrypt_decrypt($action, $string) {
     // hash
     $key = hash('sha256', $secret_key);
     
-    // iv - encrypt method AES-256-CBC expects 16 bytes - else you will get a warning
+    // iv - encrypt method AES-256-CBC expects 16 byt
+	//res - else you will get a warning
     $iv = substr(hash('sha256', $secret_iv), 0, 16);
 
     if ( $action == 'encrypt' ) {
